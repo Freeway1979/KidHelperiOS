@@ -22,6 +22,17 @@
 		CB0D70E320469763000EB616 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0D70E220469763000EB616 /* DataProvider.swift */; };
 		CB0D70E52046A1ED000EB616 /* KeyConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0D70E42046A1ED000EB616 /* KeyConstant.swift */; };
 		CB0D70E720479F31000EB616 /* iCloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB0D70E620479F31000EB616 /* iCloudManager.swift */; };
+		CB72BF5B204B8AB90087876E /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB72BF5A204B8AB90087876E /* SpeechManager.swift */; };
+		CB72BF61204B8C1E0087876E /* WXSpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB72BF60204B8C1E0087876E /* WXSpeechManager.swift */; };
+		CB72BF67204B8DD60087876E /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB72BF66204B8DD50087876E /* AudioToolbox.framework */; };
+		CB72BF69204B8DE00087876E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB72BF68204B8DE00087876E /* SystemConfiguration.framework */; };
+		CB72BF6B204B8DEC0087876E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB72BF6A204B8DEC0087876E /* CoreTelephony.framework */; };
+		CB72BF6D204B8DFE0087876E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CB72BF6C204B8DFE0087876E /* libz.tbd */; };
+		CB72BF6E204B951C0087876E /* libWXVoiceSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB72BF54204B88980087876E /* libWXVoiceSDK.a */; };
+		CB72BF6F204B95EF0087876E /* libWXVoiceSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB72BF54204B88980087876E /* libWXVoiceSDK.a */; };
+		CB72BF70204B95FB0087876E /* libWXVoiceSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB72BF54204B88980087876E /* libWXVoiceSDK.a */; };
+		CB72BF74204B98CD0087876E /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CB72BF73204B98CD0087876E /* libstdc++.6.0.9.tbd */; };
+		CB72BF77204BA6220087876E /* WXSpeechSynthesizerPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB72BF75204BA6220087876E /* WXSpeechSynthesizerPlayer.m */; };
 		CBFEDBC72047A29B007528B8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB0D70D9204651FB000EB616 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +77,20 @@
 		CB0D70E220469763000EB616 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		CB0D70E42046A1ED000EB616 /* KeyConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyConstant.swift; sourceTree = "<group>"; };
 		CB0D70E620479F31000EB616 /* iCloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudManager.swift; sourceTree = "<group>"; };
+		CB72BF54204B88980087876E /* libWXVoiceSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWXVoiceSDK.a; sourceTree = "<group>"; };
+		CB72BF55204B88980087876E /* WXSpeechSynthesizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXSpeechSynthesizer.h; sourceTree = "<group>"; };
+		CB72BF56204B88990087876E /* WXVoiceSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXVoiceSDK.h; sourceTree = "<group>"; };
+		CB72BF5A204B8AB90087876E /* SpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechManager.swift; sourceTree = "<group>"; };
+		CB72BF60204B8C1E0087876E /* WXSpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WXSpeechManager.swift; sourceTree = "<group>"; };
+		CB72BF65204B8D360087876E /* KidHelper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KidHelper-Bridging-Header.h"; sourceTree = "<group>"; };
+		CB72BF66204B8DD50087876E /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CB72BF68204B8DE00087876E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		CB72BF6A204B8DEC0087876E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		CB72BF6C204B8DFE0087876E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		CB72BF71204B97250087876E /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		CB72BF73204B98CD0087876E /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		CB72BF75204BA6220087876E /* WXSpeechSynthesizerPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXSpeechSynthesizerPlayer.m; sourceTree = "<group>"; };
+		CB72BF76204BA6220087876E /* WXSpeechSynthesizerPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXSpeechSynthesizerPlayer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +98,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB72BF74204B98CD0087876E /* libstdc++.6.0.9.tbd in Frameworks */,
+				CB72BF6E204B951C0087876E /* libWXVoiceSDK.a in Frameworks */,
+				CB72BF6D204B8DFE0087876E /* libz.tbd in Frameworks */,
+				CB72BF6B204B8DEC0087876E /* CoreTelephony.framework in Frameworks */,
+				CB72BF69204B8DE00087876E /* SystemConfiguration.framework in Frameworks */,
+				CB72BF67204B8DD60087876E /* AudioToolbox.framework in Frameworks */,
 				CBFEDBC72047A29B007528B8 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB72BF6F204B95EF0087876E /* libWXVoiceSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB72BF70204B95FB0087876E /* libWXVoiceSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +130,7 @@
 		CB0D709A20464BEE000EB616 = {
 			isa = PBXGroup;
 			children = (
+				CB72BF65204B8D360087876E /* KidHelper-Bridging-Header.h */,
 				CB0D70A520464BEE000EB616 /* KidHelper */,
 				CB0D70BC20464BEF000EB616 /* KidHelperTests */,
 				CB0D70C720464BEF000EB616 /* KidHelperUITests */,
@@ -118,22 +152,19 @@
 		CB0D70A520464BEE000EB616 /* KidHelper */ = {
 			isa = PBXGroup;
 			children = (
+				CB72BF5F204B8BF50087876E /* Constant */,
+				CB72BF5E204B8BE60087876E /* DataProvider */,
+				CB72BF5D204B8BCB0087876E /* Model */,
+				CB72BF5C204B8BBE0087876E /* ViewController */,
+				CB72BF59204B8A9A0087876E /* Voice */,
+				CB72BF53204B88580087876E /* WXVoice */,
 				CBD4B2AF2047B4BC00CF7F85 /* Extension */,
 				CB0D70E120469288000EB616 /* KidHelper.entitlements */,
 				CB0D70A620464BEE000EB616 /* AppDelegate.swift */,
-				CB0D70A820464BEE000EB616 /* HomeViewController.swift */,
-				CB0D70AA20464BEE000EB616 /* SettingViewController.swift */,
 				CB0D70AC20464BEE000EB616 /* Main.storyboard */,
 				CB0D70AF20464BEE000EB616 /* Assets.xcassets */,
 				CB0D70B120464BEE000EB616 /* LaunchScreen.storyboard */,
 				CB0D70B420464BEE000EB616 /* Info.plist */,
-				CB0D70D62046512A000EB616 /* SpeechUtteranceManager.swift */,
-				CB0D70DB20465CE0000EB616 /* SectionDataM.swift */,
-				CB0D70DD20465CF3000EB616 /* CellDataM.swift */,
-				CB0D70DF20467422000EB616 /* TextInputContrViewController.swift */,
-				CB0D70E220469763000EB616 /* DataProvider.swift */,
-				CB0D70E42046A1ED000EB616 /* KeyConstant.swift */,
-				CB0D70E620479F31000EB616 /* iCloudManager.swift */,
 			);
 			path = KidHelper;
 			sourceTree = "<group>";
@@ -159,9 +190,73 @@
 		CB0D70D8204651FB000EB616 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB72BF73204B98CD0087876E /* libstdc++.6.0.9.tbd */,
+				CB72BF71204B97250087876E /* libstdc++.tbd */,
+				CB72BF6C204B8DFE0087876E /* libz.tbd */,
+				CB72BF6A204B8DEC0087876E /* CoreTelephony.framework */,
+				CB72BF68204B8DE00087876E /* SystemConfiguration.framework */,
+				CB72BF66204B8DD50087876E /* AudioToolbox.framework */,
 				CB0D70D9204651FB000EB616 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB72BF53204B88580087876E /* WXVoice */ = {
+			isa = PBXGroup;
+			children = (
+				CB72BF76204BA6220087876E /* WXSpeechSynthesizerPlayer.h */,
+				CB72BF75204BA6220087876E /* WXSpeechSynthesizerPlayer.m */,
+				CB72BF54204B88980087876E /* libWXVoiceSDK.a */,
+				CB72BF55204B88980087876E /* WXSpeechSynthesizer.h */,
+				CB72BF56204B88990087876E /* WXVoiceSDK.h */,
+			);
+			path = WXVoice;
+			sourceTree = "<group>";
+		};
+		CB72BF59204B8A9A0087876E /* Voice */ = {
+			isa = PBXGroup;
+			children = (
+				CB72BF5A204B8AB90087876E /* SpeechManager.swift */,
+				CB0D70D62046512A000EB616 /* SpeechUtteranceManager.swift */,
+				CB72BF60204B8C1E0087876E /* WXSpeechManager.swift */,
+			);
+			path = Voice;
+			sourceTree = "<group>";
+		};
+		CB72BF5C204B8BBE0087876E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CB0D70A820464BEE000EB616 /* HomeViewController.swift */,
+				CB0D70DF20467422000EB616 /* TextInputContrViewController.swift */,
+				CB0D70AA20464BEE000EB616 /* SettingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CB72BF5D204B8BCB0087876E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB0D70DB20465CE0000EB616 /* SectionDataM.swift */,
+				CB0D70DD20465CF3000EB616 /* CellDataM.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB72BF5E204B8BE60087876E /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				CB0D70E620479F31000EB616 /* iCloudManager.swift */,
+				CB0D70E220469763000EB616 /* DataProvider.swift */,
+			);
+			path = DataProvider;
+			sourceTree = "<group>";
+		};
+		CB72BF5F204B8BF50087876E /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				CB0D70E42046A1ED000EB616 /* KeyConstant.swift */,
+			);
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		CBD4B2AF2047B4BC00CF7F85 /* Extension */ = {
@@ -320,11 +415,14 @@
 				CB0D70E020467422000EB616 /* TextInputContrViewController.swift in Sources */,
 				CB0D70E320469763000EB616 /* DataProvider.swift in Sources */,
 				CB0D70D72046512A000EB616 /* SpeechUtteranceManager.swift in Sources */,
+				CB72BF77204BA6220087876E /* WXSpeechSynthesizerPlayer.m in Sources */,
 				CB0D70DC20465CE0000EB616 /* SectionDataM.swift in Sources */,
 				CB0D70E720479F31000EB616 /* iCloudManager.swift in Sources */,
 				CB0D70DE20465CF3000EB616 /* CellDataM.swift in Sources */,
 				CB0D70A720464BEE000EB616 /* AppDelegate.swift in Sources */,
+				CB72BF5B204B8AB90087876E /* SpeechManager.swift in Sources */,
 				CB0D70E52046A1ED000EB616 /* KeyConstant.swift in Sources */,
+				CB72BF61204B8C1E0087876E /* WXSpeechManager.swift in Sources */,
 				CB0D70A920464BEE000EB616 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,14 +589,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_ENTITLEMENTS = KidHelper/KidHelper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RTCEZS3U4Z;
+				ENABLE_BITCODE = NO;
+				ENABLE_TESTABILITY = NO;
+				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = KidHelper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KidHelper/WXVoice",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rds.mos.KidHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KidHelper-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -508,14 +617,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LIBRARY = "libstdc++";
 				CODE_SIGN_ENTITLEMENTS = KidHelper/KidHelper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RTCEZS3U4Z;
+				ENABLE_BITCODE = NO;
+				ENABLE_TESTABILITY = NO;
+				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = KidHelper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KidHelper/WXVoice",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rds.mos.KidHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "KidHelper-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -530,6 +649,10 @@
 				DEVELOPMENT_TEAM = 2A2G9N54ZA;
 				INFOPLIST_FILE = KidHelperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KidHelper/WXVoice",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.chaser.KidHelperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -547,6 +670,10 @@
 				DEVELOPMENT_TEAM = 2A2G9N54ZA;
 				INFOPLIST_FILE = KidHelperTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KidHelper/WXVoice",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.chaser.KidHelperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -563,6 +690,10 @@
 				DEVELOPMENT_TEAM = 2A2G9N54ZA;
 				INFOPLIST_FILE = KidHelperUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KidHelper/WXVoice",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.chaser.KidHelperUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -579,6 +710,10 @@
 				DEVELOPMENT_TEAM = 2A2G9N54ZA;
 				INFOPLIST_FILE = KidHelperUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KidHelper/WXVoice",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = cn.com.chaser.KidHelperUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

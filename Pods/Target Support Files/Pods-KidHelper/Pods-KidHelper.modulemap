@@ -1,0 +1,6 @@
+framework module Pods_KidHelper {
+  umbrella header "Pods-KidHelper-umbrella.h"
+
+  export *
+  module * { export * }
+}

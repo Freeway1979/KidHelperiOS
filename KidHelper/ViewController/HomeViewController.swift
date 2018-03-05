@@ -8,6 +8,8 @@
 
 import UIKit
 import AVFoundation
+import Reachability
+import Alamofire
 
 extension UIButton {
     func setRoundStyle(borderColor:UIColor = UIColor.gray,borderWidth:CGFloat=2,cornerRadius:CGFloat = 6) -> Void {
@@ -68,6 +70,7 @@ class HomeViewController: UIViewController,AVSpeechSynthesizerDelegate,WXSpeechS
         speechManager.releaseResource()
     }
     
+
     func initViews() -> Void {
         self.position = UserDefaults.standard.integer(forKey: KeyConstant.MO_XIE_PROGRESS.rawValue)
         let count = UserDefaults.standard.integer(forKey: KeyConstant.MO_XIE_COUNT.rawValue)
@@ -80,7 +83,19 @@ class HomeViewController: UIViewController,AVSpeechSynthesizerDelegate,WXSpeechS
         playButton.setRoundStyle(borderColor: UIColor.clear)
     }
 
+    func checkNetwork() -> Bool {
+        let isReachable = NetworkReachabilityManager()?.isReachable
+        if !isReachable! {
+            UIUtils.showWarningMessage("警告", subtitle:"当前网络不可用，请检查你的网络")
+            return false
+        }
+        return true
+    }
+    
     @IBAction func onPlayLastButtonClicked(_ sender: UIButton) {
+        if checkNetwork() == false {
+            return
+        }
         self.position = self.position - 1
         if (self.position < 0)
         {
@@ -90,10 +105,16 @@ class HomeViewController: UIViewController,AVSpeechSynthesizerDelegate,WXSpeechS
     }
     
     @IBAction func onRepeatButtonClicked(_ sender: UIButton) {
+        if checkNetwork() == false {
+            return
+        }
         _ = playText()
     }
     
     @IBAction func onPlayButtonClicked(_ sender: UIButton) {
+        if checkNetwork() == false {
+            return
+        }
         sender.isEnabled = false
         if (startTime == nil)
         {
@@ -110,6 +131,7 @@ class HomeViewController: UIViewController,AVSpeechSynthesizerDelegate,WXSpeechS
         let result:(text:String?,count:Int?) = getPlayText(of: self.position)
         var text:String! = result.text
         if (text==nil) {
+            UIUtils.showWarningMessage("警告",subtitle: "没有设置听写内容，请在设置中添加")
             return 0
         }
         if (text == "已听写完毕") {

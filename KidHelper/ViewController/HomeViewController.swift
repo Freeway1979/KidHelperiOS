@@ -11,13 +11,13 @@ import AVFoundation
 import Reachability
 import Alamofire
 
-extension UIButton {
-    func setRoundStyle(borderColor:UIColor = UIColor.gray,borderWidth:CGFloat=2,cornerRadius:CGFloat = 6) -> Void {
-        self.layer.borderColor = borderColor.cgColor ;
-        self.layer.borderWidth = CGFloat(borderWidth);
-        self.layer.cornerRadius = CGFloat(cornerRadius);
-    }
-}
+//extension UIButton {
+//    func setRoundStyle(borderColor:UIColor = UIColor.gray,borderWidth:CGFloat=2,cornerRadius:CGFloat = 6) -> Void {
+//        self.layer.borderColor = borderColor.cgColor ;
+//        self.layer.borderWidth = CGFloat(borderWidth);
+//        self.layer.cornerRadius = CGFloat(cornerRadius);
+//    }
+//}
 
 class HomeViewController: UIViewController,AVSpeechSynthesizerDelegate,WXSpeechSynthesizerDelegate,WXSpeechSynthesizerPlayerDelegate {
     

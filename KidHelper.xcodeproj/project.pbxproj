@@ -38,6 +38,11 @@
 		CB72BF77204BA6220087876E /* WXSpeechSynthesizerPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB72BF75204BA6220087876E /* WXSpeechSynthesizerPlayer.m */; };
 		CB9BDD5D204D2AAA00CC4E47 /* SweetAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9BDD5C204D2AAA00CC4E47 /* SweetAlert.swift */; };
 		CB9BDD61204D2AF000CC4E47 /* UIUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9BDD60204D2AF000CC4E47 /* UIUtils.swift */; };
+		CB9BDD63204D32EE00CC4E47 /* SearchWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9BDD62204D32EE00CC4E47 /* SearchWordViewController.swift */; };
+		CB9BDD65204D32FB00CC4E47 /* WikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9BDD64204D32FB00CC4E47 /* WikiViewController.swift */; };
+		CB9BDD67204D38E100CC4E47 /* NetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9BDD66204D38E100CC4E47 /* NetProvider.swift */; };
+		CB9BDD69204D3E4E00CC4E47 /* UIButton_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9BDD68204D3E4E00CC4E47 /* UIButton_Extension.swift */; };
+		CB9BDD6B204D42E600CC4E47 /* String_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9BDD6A204D42E600CC4E47 /* String_Extension.swift */; };
 		CBFEDBC72047A29B007528B8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB0D70D9204651FB000EB616 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +111,11 @@
 		CB72BF76204BA6220087876E /* WXSpeechSynthesizerPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXSpeechSynthesizerPlayer.h; sourceTree = "<group>"; };
 		CB9BDD5C204D2AAA00CC4E47 /* SweetAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetAlert.swift; sourceTree = "<group>"; };
 		CB9BDD60204D2AF000CC4E47 /* UIUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtils.swift; sourceTree = "<group>"; };
+		CB9BDD62204D32EE00CC4E47 /* SearchWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWordViewController.swift; sourceTree = "<group>"; };
+		CB9BDD64204D32FB00CC4E47 /* WikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiViewController.swift; sourceTree = "<group>"; };
+		CB9BDD66204D38E100CC4E47 /* NetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetProvider.swift; sourceTree = "<group>"; };
+		CB9BDD68204D3E4E00CC4E47 /* UIButton_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton_Extension.swift; sourceTree = "<group>"; };
+		CB9BDD6A204D42E600CC4E47 /* String_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String_Extension.swift; sourceTree = "<group>"; };
 		D3231ACDD36D7E9F73F9CBB9 /* Pods-KidHelperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KidHelperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KidHelperTests/Pods-KidHelperTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -254,6 +264,8 @@
 				CB0D70A820464BEE000EB616 /* HomeViewController.swift */,
 				CB0D70DF20467422000EB616 /* TextInputContrViewController.swift */,
 				CB0D70AA20464BEE000EB616 /* SettingViewController.swift */,
+				CB9BDD62204D32EE00CC4E47 /* SearchWordViewController.swift */,
+				CB9BDD64204D32FB00CC4E47 /* WikiViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -272,6 +284,7 @@
 			children = (
 				CB0D70E620479F31000EB616 /* iCloudManager.swift */,
 				CB0D70E220469763000EB616 /* DataProvider.swift */,
+				CB9BDD66204D38E100CC4E47 /* NetProvider.swift */,
 			);
 			path = DataProvider;
 			sourceTree = "<group>";
@@ -319,6 +332,8 @@
 		CBD4B2AF2047B4BC00CF7F85 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				CB9BDD68204D3E4E00CC4E47 /* UIButton_Extension.swift */,
+				CB9BDD6A204D42E600CC4E47 /* String_Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -648,12 +663,17 @@
 				CB0D70AB20464BEE000EB616 /* SettingViewController.swift in Sources */,
 				CB0D70E020467422000EB616 /* TextInputContrViewController.swift in Sources */,
 				CB0D70E320469763000EB616 /* DataProvider.swift in Sources */,
+				CB9BDD6B204D42E600CC4E47 /* String_Extension.swift in Sources */,
+				CB9BDD65204D32FB00CC4E47 /* WikiViewController.swift in Sources */,
+				CB9BDD69204D3E4E00CC4E47 /* UIButton_Extension.swift in Sources */,
 				CB0D70D72046512A000EB616 /* SpeechUtteranceManager.swift in Sources */,
+				CB9BDD67204D38E100CC4E47 /* NetProvider.swift in Sources */,
 				CB72BF77204BA6220087876E /* WXSpeechSynthesizerPlayer.m in Sources */,
 				CB9BDD5D204D2AAA00CC4E47 /* SweetAlert.swift in Sources */,
 				CB0D70DC20465CE0000EB616 /* SectionDataM.swift in Sources */,
 				CB0D70E720479F31000EB616 /* iCloudManager.swift in Sources */,
 				CB0D70DE20465CF3000EB616 /* CellDataM.swift in Sources */,
+				CB9BDD63204D32EE00CC4E47 /* SearchWordViewController.swift in Sources */,
 				CB0D70A720464BEE000EB616 /* AppDelegate.swift in Sources */,
 				CB72BF5B204B8AB90087876E /* SpeechManager.swift in Sources */,
 				CB0D70E52046A1ED000EB616 /* KeyConstant.swift in Sources */,

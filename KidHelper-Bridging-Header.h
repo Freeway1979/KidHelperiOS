@@ -11,3 +11,5 @@
 #import "KidHelper/WXVoice/WXSpeechSynthesizer.h"
 #import "KidHelper/WXVoice/WXSpeechSynthesizerPlayer.h"
 
+#import "Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.h"
+

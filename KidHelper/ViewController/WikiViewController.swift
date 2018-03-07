@@ -8,20 +8,49 @@
 
 import UIKit
 
-class WikiViewController: UIViewController {
+class WikiViewController: UIViewController ,UIWebViewDelegate{
 
+    @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var inputTextField: UITextField!
+    @IBOutlet weak var searchButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        initViews()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+   
+    @IBAction func onSearchButtonClicked(_ sender: UIButton) {
+        if let text = inputTextField.text {
+            inputTextField.resignFirstResponder()
+            if (text.isEmpty)
+            {
+                return
+            }
+            UIUtils.showLoading()
+            NetProvider.searchBaiduBaike(text: text, webView: webView)
+        }
     }
     
+    func initViews() {
+        searchButton.setRoundStyle(borderColor: UIColor.clear)
+        webView.delegate = self
+    }
+    
+    //========UIWebViewDelegate
+    public func webViewDidStartLoad(_ webView: UIWebView)
+    {
+        UIUtils.showLoading()
+    }
+    
+    public func webViewDidFinishLoad(_ webView: UIWebView)
+    {
+        UIUtils.dismissLoading()
+    }
 
+    
     /*
     // MARK: - Navigation
 

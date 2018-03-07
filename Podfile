@@ -7,6 +7,7 @@ target 'KidHelper' do
   pod 'ReachabilitySwift'
   pod 'Alamofire', '~> 4.6'
   pod 'SwiftyJSON'
+  pod 'SVProgressHUD'
 
   # Pods for KidHelper
 

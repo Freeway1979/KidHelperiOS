@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchWordViewController: UIViewController {
+class SearchWordViewController: UIViewController,UIWebViewDelegate {
 
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
@@ -25,7 +25,12 @@ class SearchWordViewController: UIViewController {
     @IBAction func onSearchButtonClicked(_ sender: UIButton) {
         if let text = inputTextField.text {
             inputTextField.resignFirstResponder()
+            if (text.isEmpty)
+            {
+                return
+            }
             let containsChinese = text.containChineseWords()
+           
             if (containsChinese)
             {
                 NetProvider.searchBaiduHanyu(text: text, webView: webView)
@@ -39,7 +44,19 @@ class SearchWordViewController: UIViewController {
     
     func initViews() {
         searchButton.setRoundStyle(borderColor: UIColor.clear)
+        webView.delegate = self
     }
+    //========UIWebViewDelegate
+    public func webViewDidStartLoad(_ webView: UIWebView)
+    {
+       UIUtils.showLoading()
+    }
+    
+    public func webViewDidFinishLoad(_ webView: UIWebView)
+    {
+       UIUtils.dismissLoading()
+    }
+
     /*
     // MARK: - Navigation
 

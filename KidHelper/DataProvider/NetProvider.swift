@@ -21,6 +21,14 @@ class NetProvider: NSObject {
         
         searchText(via: RAW_URL, webView: webView)
     }
+    class func searchBaiduBaike(text:String,webView:UIWebView) {
+        let URL = "https://baike.baidu.com/item/\(text)"
+        searchText(via: URL, webView: webView)
+    }
+    class func searchWikiBaike(text:String,webView:UIWebView) {
+        let URL = "http://www.baike.com/wiki/\(text)"
+        searchText(via: URL, webView: webView)
+    }
     class func searchText(via url:String,webView:UIWebView)
     {
         let urlString = url.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)

@@ -209,7 +209,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="M86-Pz-xcX">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="汉语或英语" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="M86-Pz-xcX">
                                 <rect key="frame" x="15" y="89" width="245" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="nuS-Lb-Oo2"/>
@@ -263,22 +263,6 @@
             </objects>
             <point key="canvasLocation" x="1909.5" y="367.5"/>
         </scene>
-        <!--学习助手-->
-        <scene sceneID="vdw-Ll-XuE">
-            <objects>
-                <viewController id="HTW-8C-ogC" customClass="WikiViewController" customModule="KidHelper" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="iiE-42-olD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ml7-Su-5Cr"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="学习助手" id="pTY-mq-aLz"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0JQ-mt-HWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1910" y="-1065"/>
-        </scene>
         <!--听写-->
         <scene sceneID="xxD-hq-Dda">
             <objects>
@@ -310,7 +294,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="HTW-8C-ogC" kind="relationship" relationship="rootViewController" id="mUm-zT-SfW"/>
+                        <segue destination="jGa-Tn-rFF" kind="relationship" relationship="rootViewController" id="Gho-kL-y7A"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nll-1r-IPC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -335,6 +319,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WH8-au-hyY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="971.20000000000005" y="375.11244377811096"/>
+        </scene>
+        <!--学习助手-->
+        <scene sceneID="qqe-RG-Gw7">
+            <objects>
+                <viewController id="jGa-Tn-rFF" customClass="WikiViewController" customModule="KidHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oKA-li-GhU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="知识百科" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="fqf-IA-FS0">
+                                <rect key="frame" x="15" y="89" width="245" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Z1Z-wi-ZQ0"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUy-Cc-fcR">
+                                <rect key="frame" x="280" y="89" width="80" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NyF-GK-5pn"/>
+                                    <constraint firstAttribute="width" constant="80" id="Yfe-aH-TDO"/>
+                                </constraints>
+                                <state key="normal" title="查一下">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onSearchButtonClicked:" destination="jGa-Tn-rFF" eventType="touchUpInside" id="OVk-lJ-jnX"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kId-l4-JKU">
+                                <rect key="frame" x="15" y="149" width="345" height="454"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gUy-Cc-fcR" firstAttribute="top" secondItem="9Xx-mi-t28" secondAttribute="top" constant="25" id="5he-Pw-RjX"/>
+                            <constraint firstItem="gUy-Cc-fcR" firstAttribute="leading" secondItem="fqf-IA-FS0" secondAttribute="trailing" constant="20" id="7YW-PR-uqV"/>
+                            <constraint firstItem="9Xx-mi-t28" firstAttribute="trailing" secondItem="kId-l4-JKU" secondAttribute="trailing" constant="15" id="Vb4-7m-jc3"/>
+                            <constraint firstItem="fqf-IA-FS0" firstAttribute="top" secondItem="9Xx-mi-t28" secondAttribute="top" constant="25" id="dEA-6f-fXy"/>
+                            <constraint firstItem="9Xx-mi-t28" firstAttribute="trailing" secondItem="gUy-Cc-fcR" secondAttribute="trailing" constant="15" id="krI-y9-ipz"/>
+                            <constraint firstItem="kId-l4-JKU" firstAttribute="leading" secondItem="9Xx-mi-t28" secondAttribute="leading" constant="15" id="lQL-z5-stf"/>
+                            <constraint firstItem="9Xx-mi-t28" firstAttribute="bottom" secondItem="kId-l4-JKU" secondAttribute="bottom" constant="15" id="lsS-Jq-uXb"/>
+                            <constraint firstItem="kId-l4-JKU" firstAttribute="top" secondItem="fqf-IA-FS0" secondAttribute="bottom" constant="20" id="oyB-1r-pf0"/>
+                            <constraint firstItem="fqf-IA-FS0" firstAttribute="leading" secondItem="9Xx-mi-t28" secondAttribute="leading" constant="15" id="zEC-dq-pAU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Xx-mi-t28"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="学习助手" id="kFe-i3-2ax"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="inputTextField" destination="fqf-IA-FS0" id="pO8-5Y-9qD"/>
+                        <outlet property="searchButton" destination="gUy-Cc-fcR" id="ons-3X-v7z"/>
+                        <outlet property="webView" destination="kId-l4-JKU" id="fI8-Ej-pRt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nxZ-qq-mVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1844" y="-1087"/>
         </scene>
     </scenes>
     <resources>

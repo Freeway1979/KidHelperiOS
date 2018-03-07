@@ -25,4 +25,34 @@ class UIUtils {
     {
         _ = SweetAlert().showAlert(title, subTitle: subtitle, style: AlertStyle.success)
     }
+    class func showLoading()
+    {
+        SVProgressHUD.show()
+    }
+    class func showLoading(text:String?)
+    {
+        SVProgressHUD.show(withStatus: text)
+    }
+    class func showError(text:String?)
+    {
+        SVProgressHUD.showError(withStatus: text)
+    }
+    class func showSuccess(text:String?)
+    {
+        SVProgressHUD.showSuccess(withStatus: text)
+    }
+    class func showInfo(text:String?)
+    {
+        SVProgressHUD.showInfo(withStatus: text)
+    }
+    class func dismissLoading(delay:TimeInterval = 0)
+    {
+        if (delay == 0) {
+          SVProgressHUD.dismiss()
+        }
+        else
+        {
+           SVProgressHUD.dismiss(withDelay: delay)
+        }
+    }
 }
